@@ -9,6 +9,7 @@ namespace Test.Project
         {
             var dict = new Dictionary<string, int>
             {
+                { "five1oneight", 58},
                 { "two1nine", 29 },
                 { "eightwothree", 83},
                 { "abcone2threexyz", 13 },
@@ -22,7 +23,7 @@ namespace Test.Project
                 { "pqr3stu8vwx", 38 },
                 { "a1b2c3d4e5f" , 15},
                 { "treb7uchet", 77 },
-                { "eighthree", 88},
+                { "eighthree", 83},
                 { "eightthree", 83 },
             };
             foreach (var item in dict)
@@ -30,6 +31,14 @@ namespace Test.Project
                 var result = item.Key.ReplaceWordsWithDigit().FindDigits();
                 Assert.Equal(item.Value, result);
             }
+        }
+
+        [Fact]
+        public void Single_Test()
+        {
+            var result = "eighthree".ReplaceWordsWithDigit().FindDigits();
+            Assert.Equal(83, result);
+
         }
     }
 }

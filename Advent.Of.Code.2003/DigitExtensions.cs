@@ -35,7 +35,8 @@ public static class DigitExtensions
         if (foundPositions.Any())
         {
             var index = foundPositions.MinBy(w => w.Key);
-            line = line.Replace(index.Value.Key, index.Value.Value);
+            //note eighthree should be 83, therefore when subsituting jsut add back in the last letter
+            line = line.Replace(index.Value.Key, index.Value.Value + index.Value.Key.Last());
         }
 
         //find last one, lets utilise reverse, and basically do the same above
