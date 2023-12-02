@@ -10,19 +10,6 @@ internal static class Day1
         PartB();
     }
 
-    private static void PartB()
-    {
-        var total = 0;
-        foreach (var line in lines)
-        {
-            var firstDigit = line.ReplaceWordsWithDigit().FindFirstDigit();
-            var lastDigit = line.ReplaceWordsWithDigit().FindLastDigit();
-            total += int.Parse($"{firstDigit}{lastDigit}");
-        }
-
-        Console.WriteLine(total);
-    }
-
     private static void PartA()
     {
         var total = 0;
@@ -30,6 +17,19 @@ internal static class Day1
         {
             var firstDigit = line.FindFirstDigit();
             var lastDigit = line.FindLastDigit();
+            total += int.Parse($"{firstDigit}{lastDigit}");
+        }
+
+        Console.WriteLine(total);
+    }
+
+    private static void PartB()
+    {
+        var total = 0;
+        foreach (var line in lines)
+        {
+            var firstDigit = line.ReplaceWordsWithDigit().FindFirstDigit();
+            var lastDigit = line.ReplaceWordsWithDigit().FindLastDigit();
             total += int.Parse($"{firstDigit}{lastDigit}");
         }
 
