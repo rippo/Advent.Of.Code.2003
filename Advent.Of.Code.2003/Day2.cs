@@ -27,7 +27,7 @@ internal static class Day2
 
             total += line.Id;
         }
-        Console.WriteLine(total);
+        Console.WriteLine($"Day 2A: {total}");
     }
 
     private static void PartB()
@@ -52,11 +52,12 @@ internal static class Day2
             var subtotal = minR * minG * minB;
             total += subtotal;
         }
-        Console.WriteLine(total);
+        Console.WriteLine($"Day 2B: {total}");
     }
 
     private static void ParseLines()
     {
+        //refactor this foreach loop into regex and linq
         foreach (var line in lines)
         {
             var dto = new ParsedLine();
