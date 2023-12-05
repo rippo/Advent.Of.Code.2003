@@ -2,10 +2,10 @@ using Advent.Of.Code._2003;
 
 namespace Test.Project
 {
-    public class DayOne_Tester
+    public class DayOneTester
     {
         [Fact]
-        public void Multiple_Test()
+        public void Multiple_PartB_Test()
         {
             var dict = new Dictionary<string, int>
             {
@@ -26,18 +26,26 @@ namespace Test.Project
                 { "eighthree", 83},
                 { "eightthree", 83 },
             };
-            foreach (var item in dict)
-            {
-                var result = item.Key.ReplaceWordsWithDigit().FindDigits();
-                Assert.Equal(item.Value, result);
-            }
+            var expectedResult = dict.Values.ToArray().ToList().Sum(w => w);
+            Day1.Lines = dict.Keys.ToArray();
+            Assert.Equal(expectedResult, Day1.PartB());
         }
 
         [Fact]
-        public void Single_Test()
+        public void Single_PartA_Test()
         {
-            var result = "eighthree".ReplaceWordsWithDigit().FindDigits();
-            Assert.Equal(83, result);
+            string[] input = { "123RIPPO456" };
+            Day1.Lines = input;
+            Assert.Equal(16, Day1.PartA());
+        }
+
+
+        [Fact]
+        public void Single_PartB_Test()
+        {
+            string[] input = { "eighthree" };
+            Day1.Lines = input;
+            Assert.Equal(83, Day1.PartB());
         }
     }
 }
