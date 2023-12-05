@@ -38,7 +38,6 @@ namespace Test.Project
         {
             var result = "eighthree".ReplaceWordsWithDigit().FindDigits();
             Assert.Equal(83, result);
-
         }
     }
 }
