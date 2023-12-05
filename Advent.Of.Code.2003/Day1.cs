@@ -22,7 +22,7 @@ public static class Day1
             total += int.Parse($"{firstDigit}{lastDigit}");
         }
 
-        Console.WriteLine(total);
+        Console.WriteLine($"Day 1A: {total}");
         return total;
     }
 
@@ -55,7 +55,7 @@ public static class Day1
             total += firstDigit + lastDigit;
         }
 
-        Console.WriteLine(total);
+        Console.WriteLine($"Day 1B: {total}");
         return total;
     }
 
