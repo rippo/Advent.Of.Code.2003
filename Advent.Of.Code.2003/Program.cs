@@ -10,6 +10,7 @@ namespace Advent.Of.Code._2003
             Day1.Go();
             Day2.Go();
             Day3.Go("input-day3.txt");
+            Day4.Go("");
         }
     }
 }
