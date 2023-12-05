@@ -2,7 +2,7 @@
 {
     internal class Day4
     {
-        public static void Go(string empty)
+        public static void Go()
         {
             PartA();
             PartB();
