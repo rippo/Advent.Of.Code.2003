@@ -7,10 +7,10 @@ namespace Advent.Of.Code._2003
     {
         public static void Main(string[] args)
         {
-            Day1.Go();
-            Day2.Go();
-            Day3.Go("input-day3.txt");
-            Day4.Go();
+            new Day1().Go();
+            new Day2().Go();
+            new Day3().Go();
+            new Day4().Go();
         }
     }
 }

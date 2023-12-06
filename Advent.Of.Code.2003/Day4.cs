@@ -2,18 +2,18 @@
 {
     internal class Day4
     {
-        public static void Go()
+        public void Go()
         {
             PartA();
             PartB();
         }
 
-        private static string[] GetNumbers(string line, int part)
+        private string[] GetNumbers(string line, int part)
         {
             return line.Split(':')[1].Split('|')[part].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
         }
 
-        private static void PartA()
+        private void PartA()
         {
             var pointSum = 0;
             var filePath = $"..\\..\\..\\input-day4.txt";
@@ -30,7 +30,7 @@
             Console.WriteLine($"Part 4a: {pointSum}");
         }
 
-        private static void PartB()
+        private void PartB()
         {
             var filePath = $"..\\..\\..\\input-day4.txt";
             var lines = File.ReadAllLines(filePath);

@@ -2,9 +2,9 @@
 
 namespace Advent.Of.Code._2003;
 
-public static class Day1
+public class Day1
 {
-    public static void Go()
+    public void Go()
     {
         var filePath = "..\\..\\..\\input-day1.txt";
         Lines = File.ReadAllLines(filePath);
@@ -12,7 +12,7 @@ public static class Day1
         PartB();
     }
 
-    public static int PartA()
+    public int PartA()
     {
         var total = 0;
         foreach (var line in Lines)
@@ -26,7 +26,7 @@ public static class Day1
         return total;
     }
 
-    public static int PartB()
+    public int PartB()
     {
         var total = 0;
 
@@ -59,5 +59,5 @@ public static class Day1
         return total;
     }
 
-    public static string[] Lines = Array.Empty<string>();
+    public string[] Lines = Array.Empty<string>();
 }

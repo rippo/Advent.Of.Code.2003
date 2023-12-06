@@ -1,8 +1,8 @@
 ﻿namespace Advent.Of.Code._2003;
 
-internal static class Day2
+internal class Day2
 {
-    public static void Go()
+    public void Go()
     {
         const string filePath = "..\\..\\..\\input-day2.txt";
         lines = File.ReadAllLines(filePath);
@@ -11,10 +11,10 @@ internal static class Day2
         PartB();
     }
 
-    private static void PartA()
+    private void PartA()
     {
         var total = 0;
-        foreach (var line in ParsedLines)
+        foreach (var line in parsedLines)
         {
             if (line.Sets.Any(x => x.Red > 12))
                 continue;
@@ -30,10 +30,10 @@ internal static class Day2
         Console.WriteLine($"Day 2A: {total}");
     }
 
-    private static void PartB()
+    private void PartB()
     {
         var total = 0;
-        foreach (var line in ParsedLines)
+        foreach (var line in parsedLines)
         {
             var minR = 0;
             var minG = 0;
@@ -55,7 +55,7 @@ internal static class Day2
         Console.WriteLine($"Day 2B: {total}");
     }
 
-    private static void ParseLines()
+    private void ParseLines()
     {
         //refactor this foreach loop into regex and linq
         foreach (var line in lines)
@@ -90,12 +90,12 @@ internal static class Day2
                 });
             }
 
-            ParsedLines.Add(dto);
+            parsedLines.Add(dto);
         }
     }
 
-    private static string[] lines;
-    private static readonly List<ParsedLine> ParsedLines = new();
+    private string[] lines;
+    private readonly List<ParsedLine> parsedLines = new();
 
     private record ParsedLine
     {

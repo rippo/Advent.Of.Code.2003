@@ -27,16 +27,22 @@ namespace Test.Project
                 { "eightthree", 83 },
             };
             var expectedResult = dict.Values.ToArray().ToList().Sum(w => w);
-            Day1.Lines = dict.Keys.ToArray();
-            Assert.Equal(expectedResult, Day1.PartB());
+            var d = new Day1
+            {
+                Lines = dict.Keys.ToArray()
+            };
+            Assert.Equal(expectedResult, d.PartB());
         }
 
         [Fact]
         public void Single_PartA_Test()
         {
             string[] input = { "123RIPPO456" };
-            Day1.Lines = input;
-            Assert.Equal(16, Day1.PartA());
+            var d = new Day1
+            {
+                Lines = input
+            };
+            Assert.Equal(16, d.PartA());
         }
 
 
@@ -44,8 +50,11 @@ namespace Test.Project
         public void Single_PartB_Test()
         {
             string[] input = { "eighthree" };
-            Day1.Lines = input;
-            Assert.Equal(83, Day1.PartB());
+            var d = new Day1
+            {
+                Lines = input
+            };
+            Assert.Equal(83, d.PartB());
         }
     }
 }
