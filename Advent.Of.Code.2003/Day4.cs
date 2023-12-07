@@ -26,8 +26,7 @@
                 pointSum += (int)Math.Pow(2, wonNums.Count() - 1);
             }
 
-            //23678
-            Console.WriteLine($"Part 4a: {pointSum}");
+            Console.WriteLine($"Day 4A: {pointSum}");
         }
 
         private void PartB()
@@ -48,8 +47,7 @@
                 }
             }
 
-            //15455663
-            Console.WriteLine($"Part 4b: {cards.Sum()}");
+            Console.WriteLine($"Day 4B: {cards.Sum()}");
         }
     }
 }

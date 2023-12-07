@@ -11,6 +11,7 @@ namespace Advent.Of.Code._2003
             new Day2().Go();
             new Day3().Go();
             new Day4().Go();
+            new Day5().Go();
         }
     }
 }

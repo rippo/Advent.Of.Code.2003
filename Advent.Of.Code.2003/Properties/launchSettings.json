@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Advent.Of.Code.2003": {
+      "commandName": "Project",
+      "environmentVariables": {
+      }
+    }
+  }
+}
