@@ -63,6 +63,7 @@
         private void PartB()
         {
             Console.WriteLine("Day 5B: Skiping as it takes to long to compute Answer was 125742456");
+            return;
 
             var locations = new List<long>();
             for (var i = 0; i < seeds.Length; i += 2)
