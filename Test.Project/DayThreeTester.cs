@@ -1,4 +1,4 @@
-using Advent.Of.Code._2003;
+using AdventOfCode2023;
 
 namespace Test.Project;
 

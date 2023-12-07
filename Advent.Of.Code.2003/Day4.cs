@@ -1,4 +1,4 @@
-﻿namespace Advent.Of.Code._2003
+﻿namespace AdventOfCode2023
 {
     internal class Day4
     {
